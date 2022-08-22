@@ -5,5 +5,9 @@ mydb = mysql.connector.connect(
   user="root",
   password="hardik"
 )
+mycursor  = mydb.cursor() 
 
-print(mydb)
+mycursor.execute("SHOW DATABASES")
+
+for x in mycursor:
+  print(x)
